@@ -1,0 +1,14 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h3>All Known Planets</h3>
+    </div>
+    <div *ngFor="let planet of planets" class="card col-12 col-md-3 ml-3">
+      <img class="card-img-top" [src]="planet.image" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{planet.planet_name}}</h5>
+        <a [routerLink]="['/planets/details/', planet.slug]" class="btn btn-primary">Learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
