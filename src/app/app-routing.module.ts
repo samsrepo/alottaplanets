@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'planets', loadChildren: './planets/planets.module#PlanetsModule'}
+  {path: 'planets', loadChildren: () => import('./planets/planets.module').then(m => m.PlanetsModule)}
 ];
 
 @NgModule({
